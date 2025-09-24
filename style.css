@@ -36,11 +36,3 @@
     gap: 100px;
     margin: 50px auto;
 }
-
-.products-list {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 10px;
-}
-
-
