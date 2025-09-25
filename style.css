@@ -25,6 +25,11 @@
     margin-bottom: 32px;
 }
 
+.cart {
+    position: relative;
+    cursor: pointer;
+}
+
 .cart-popup {
     display: none;
     position: absolute;
