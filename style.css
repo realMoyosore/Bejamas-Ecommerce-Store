@@ -281,3 +281,113 @@
   font-size: 1.3rem;
 }
 
+.filter-toggle-btn {
+  display: none;
+}
+
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.12);
+    z-index: 200;
+    justify-content: flex-end;
+  }
+
+@media (max-width: 600px) {
+  .products-list {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .sidebar {
+    display: none;
+  }
+
+  .filter-toggle-btn {
+    display: inline-flex !important;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+
+  .sidebar-overlay.active {
+    display: flex;
+  }
+  .sidebar-modal {
+    background: #fff;
+    width: 100vw;
+    max-width: 414px;
+    height: 100vh;
+    padding: 32px 24px 24px 24px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 0 24px rgba(0,0,0,0.15);
+    animation: slideIn 0.2s;
+  }
+  @keyframes slideIn {
+    from { transform: translateX(-100%);}
+    to { transform: translateX(0);}
+  }
+  .sidebar-modal h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sidebar-modal .close-sidebar {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 8px;
+    line-height: 1;
+  }
+  .sidebar-modal .filter-group h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .sidebar-modal .filter-group ul {
+    margin-bottom: 24px;
+  }
+  .sidebar-modal .filter-group li {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+  }
+  .sidebar-modal .filter-group input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    accent-color: #000;
+  }
+  .sidebar-modal .filter-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .sidebar-modal .filter-actions button {
+    flex: 1;
+    padding: 12px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 2px;
+    border: 2px solid #000;
+    cursor: pointer;
+    background: #fff;
+    transition: background 0.2s, color 0.2s;
+  }
+  .sidebar-modal .filter-actions .save-btn {
+    background: #000;
+    color: #fff;
+  }
+  .sidebar-modal .filter-actions .clear-btn {
+    background: #fff;
+    color: #000;
+  }
+}

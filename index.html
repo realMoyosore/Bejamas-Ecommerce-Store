@@ -87,8 +87,8 @@
                 velit adipisicing et anim velit occaecat amet aliquip. Sit culpa deserunt pariatur
                 ad esse. Voluptate culpa cupidatat ipsum ullamco ut duis sint dolore. Sunt magna
                 elit id consequat consectetur et eiusmod voluptate amet.
-                <br>
-                <br>
+                <br />
+                <br />
                 Voluptate aliquip et nostrud Lorem amet exercitation dolore proident commodo
                 exercitation Lorem exercitation aliqua do.
               </p>
@@ -111,6 +111,16 @@
           <section class="products-section">
             <div class="products-heading">
               <h2 id="product-type">Photography / <span class="gray-text">Premium Photos</span></h2>
+              <button class="filter-toggle-btn" aria-label="Show filters">
+                <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
+                  <rect width="24" height="24" fill="none" />
+                  <path
+                    d="M3 6h18M6 12h12M10 18h4"
+                    stroke="#000"
+                    stroke-width="2"
+                    stroke-linecap="round" />
+                </svg>
+              </button>
               <div class="sort-by-tab">
                 <span>Sort By</span>
                 <select>
@@ -223,63 +233,54 @@
                 </div>
               </div>
             </div>
+
+
             <div class="products-nav">
               <button class="nav-button">1</button>
               <button class="nav-button">2</button>
               <button class="nav-button active">3</button>
               <button class="nav-button">4</button>
             </div>
-
-            <!-- <div class="products-heading">
-              <h2 id="product-type">Photography / <span class="gray-text">Premium Photos</span></h2>
-              <div class="sort-by-tab">
-                <h3 id="sort"><span class="gray-text">Sort By</span> Price</h3>
-              </div>
-            </div>
-            <div class="products-list">
-              <div class="category-card"></div>
-              <div class="products-img-card">
-                <div class="product-img">
-                  <img src="resources/images/best-seller.png" alt="product 1" />
-                  <h3>Red Bench</h3>
-                  <p>$3.89</p>
-                </div>
-                <div class="product-img">
-                  <img src="resources/images/beige-wall.png" alt="product 2" />
-                  <h3>Sunset in the mountains</h3>
-                  <p>$19.00</p>
-                </div>
-                <div class="product-img">
-                  <img src="resources/images/generic-wall.png" alt="product 2" />
-                  <h3>Sunset in the mountains</h3>
-                  <p>$19.00</p>
-                </div>
-                <div class="product-img">
-                  <img src="resources/images/yellow-wall.png" alt="product 3" />
-                  <h3>Sunset in the mountains</h3>
-                  <p>$19.00</p>
-                </div>
-                <div class="product-img">
-                  <img src="resources/images/off-white-wall.png" alt="product 5" />
-                  <h3>Sunset in the mountains</h3>
-                  <p>$19.00</p>
-                </div>
-                <div class="product-img">
-                  <img src="resources/images/generic-wall.png" alt="product 6" />
-                  <h3>Sunset in the mountains</h3>
-                  <p>$19.00</p>
-                </div>
-              </div>
-            </div>
-            <div class="products-nav">
-              <button class="nav-button">1</button>
-              <button class="nav-button">2</button>
-              <button class="nav-button">3</button>
-              <button class="nav-button">4</button>
-            </div> -->
           </section>
         </div>
       </main>
+      
+      <div class="sidebar-overlay" id="sidebarOverlay">
+  <div class="sidebar-modal">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <span style="font-size:2rem;font-weight:700;">Filter</span>
+      <button class="close-sidebar" aria-label="Close filter">&times;</button>
+    </div>
+    <div class="filter-group">
+      <h4>Category</h4>
+      <ul>
+        <li><input type="checkbox" id="m-people"><label for="m-people"> People</label></li>
+        <li><input type="checkbox" id="m-premium"><label for="m-premium"> Premium</label></li>
+        <li><input type="checkbox" id="m-pets"><label for="m-pets"> Pets</label></li>
+        <li><input type="checkbox" id="m-food"><label for="m-food"> Food</label></li>
+        <li><input type="checkbox" id="m-landmarks"><label for="m-landmarks"> Landmarks</label></li>
+        <li><input type="checkbox" id="m-cities"><label for="m-cities"> Cities</label></li>
+        <li><input type="checkbox" id="m-nature"><label for="m-nature"> Nature</label></li>
+      </ul>
+    </div>
+    <hr style="margin:16px 0;">
+    <div class="filter-group">
+      <h4>Price range</h4>
+      <ul>
+        <li><input type="checkbox" id="m-lt20"><label for="m-lt20"> Lower than $20</label></li>
+        <li><input type="checkbox" id="m-20-100"><label for="m-20-100"> $20 - $100</label></li>
+        <li><input type="checkbox" id="m-100-200"><label for="m-100-200"> $100 - $200</label></li>
+        <li><input type="checkbox" id="m-gt200"><label for="m-gt200"> More than $200</label></li>
+      </ul>
+    </div>
+    <div class="filter-actions">
+      <button class="clear-btn">CLEAR</button>
+      <button class="save-btn">SAVE</button>
+    </div>
+  </div>
+</div>
+
+
     </div>
   </body>
 </html>
