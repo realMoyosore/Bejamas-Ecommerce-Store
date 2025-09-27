@@ -281,31 +281,3 @@
   font-size: 1.3rem;
 }
 
-@media (max-width: 900px) {
-  .container {
-    padding: 16px;
-  }
-  .products-list {
-    grid-template-columns: 1fr;
-  }
-  .products-img-card {
-    grid-template-columns: 1fr 1fr;
-  }
-  .hero-text {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-}
-
-@media (max-width: 600px) {
-  .products-img-card {
-    grid-template-columns: 1fr;
-  }
-  .header {
-    flex-direction: column;
-    gap: 12px;
-  }
-  .container {
-    padding: 8px;
-  }
-}
