@@ -13,5 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+     // Sidebar filter checkboxes
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebar) {
+        sidebar.addEventListener('change', function(e) {
+        });
+    }
+    
 });
 
