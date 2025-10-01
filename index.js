@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Optional: CLEAR button resets all checkboxes
+    // CLEAR button resets all checkboxes
     const clearBtn = document.querySelector('.clear-btn');
     if (clearBtn && sidebarOverlay) {
         clearBtn.addEventListener('click', function() {

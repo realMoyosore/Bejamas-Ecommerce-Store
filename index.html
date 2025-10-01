@@ -107,7 +107,6 @@
               </div>
             </div>
           </div>
-          <hr />
           <section class="products-section">
             <div class="products-heading">
               <h2 id="product-type">Photography / <span class="gray-text">Premium Photos</span></h2>
@@ -176,9 +175,9 @@
                 </div>
               </aside>
               <div class="products-img-card">
-                <div class="product-card best-seller">
+                <div class="product-card">
                   <span class="badge">Best Seller</span>
-                  <img src="resources/images/best-seller.png" alt="Red Bench" />
+                  <img class="best-seller" src="resources/images/best-seller.png" alt="Red Bench" />
                   <button class="add-to-cart-btn">ADD TO CART</button>
                   <div class="product-info">
                     <span class="category">People</span>
@@ -187,7 +186,10 @@
                   </div>
                 </div>
                 <div class="product-card">
-                  <img src="resources/images/off-white-wall.png" alt="Egg Balloon" />
+                  <img
+                    src="resources/images/off-white-wall.png"
+                    alt="Egg Balloon"
+                    class="ballon-img" />
                   <button class="add-to-cart-btn">ADD TO CART</button>
                   <div class="product-info">
                     <span class="category">Food</span>
@@ -196,7 +198,10 @@
                   </div>
                 </div>
                 <div class="product-card">
-                  <img src="resources/images/off-white-wall.png" alt="Egg Balloon" />
+                  <img
+                    src="resources/images/off-white-wall.png"
+                    alt="Egg Balloon"
+                    class="ballon-img" />
                   <button class="add-to-cart-btn">ADD TO CART</button>
                   <div class="product-info">
                     <span class="category">Food</span>
@@ -234,53 +239,81 @@
               </div>
             </div>
 
-
             <div class="products-nav">
+              <svg class="arrow"
+                width="12"
+                height="18"
+                viewBox="0 0 13 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 2L3 10L11 18" stroke="black" stroke-width="3" />
+              </svg>
+
               <button class="nav-button">1</button>
               <button class="nav-button">2</button>
               <button class="nav-button active">3</button>
               <button class="nav-button">4</button>
+              <svg class="arrow"
+                width="12"
+                height="18"
+                viewBox="0 0 13 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2L10 10L2 18" stroke="black" stroke-width="3" />
+              </svg>
             </div>
           </section>
         </div>
       </main>
-      
+
       <div class="sidebar-overlay" id="sidebarOverlay">
-  <div class="sidebar-modal">
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-      <span style="font-size:2rem;font-weight:700;">Filter</span>
-      <button class="close-sidebar" aria-label="Close filter">&times;</button>
-    </div>
-    <div class="filter-group">
-      <h4>Category</h4>
-      <ul>
-        <li><input type="checkbox" id="m-people"><label for="m-people"> People</label></li>
-        <li><input type="checkbox" id="m-premium"><label for="m-premium"> Premium</label></li>
-        <li><input type="checkbox" id="m-pets"><label for="m-pets"> Pets</label></li>
-        <li><input type="checkbox" id="m-food"><label for="m-food"> Food</label></li>
-        <li><input type="checkbox" id="m-landmarks"><label for="m-landmarks"> Landmarks</label></li>
-        <li><input type="checkbox" id="m-cities"><label for="m-cities"> Cities</label></li>
-        <li><input type="checkbox" id="m-nature"><label for="m-nature"> Nature</label></li>
-      </ul>
-    </div>
-    <hr style="margin:16px 0;">
-    <div class="filter-group">
-      <h4>Price range</h4>
-      <ul>
-        <li><input type="checkbox" id="m-lt20"><label for="m-lt20"> Lower than $20</label></li>
-        <li><input type="checkbox" id="m-20-100"><label for="m-20-100"> $20 - $100</label></li>
-        <li><input type="checkbox" id="m-100-200"><label for="m-100-200"> $100 - $200</label></li>
-        <li><input type="checkbox" id="m-gt200"><label for="m-gt200"> More than $200</label></li>
-      </ul>
-    </div>
-    <div class="filter-actions">
-      <button class="clear-btn">CLEAR</button>
-      <button class="save-btn">SAVE</button>
-    </div>
-  </div>
-</div>
-
-
+        <div class="sidebar-modal">
+          <div style="display: flex; justify-content: space-between; align-items: center">
+            <span style="font-size: 2rem; font-weight: 700">Filter</span>
+            <button class="close-sidebar" aria-label="Close filter">&times;</button>
+          </div>
+          <div class="filter-group">
+            <h4>Category</h4>
+            <ul>
+              <li><input type="checkbox" id="m-people" /><label for="m-people"> People</label></li>
+              <li>
+                <input type="checkbox" id="m-premium" /><label for="m-premium"> Premium</label>
+              </li>
+              <li><input type="checkbox" id="m-pets" /><label for="m-pets"> Pets</label></li>
+              <li><input type="checkbox" id="m-food" /><label for="m-food"> Food</label></li>
+              <li>
+                <input type="checkbox" id="m-landmarks" /><label for="m-landmarks">
+                  Landmarks</label
+                >
+              </li>
+              <li><input type="checkbox" id="m-cities" /><label for="m-cities"> Cities</label></li>
+              <li><input type="checkbox" id="m-nature" /><label for="m-nature"> Nature</label></li>
+            </ul>
+          </div>
+          <hr style="margin: 16px 0" />
+          <div class="filter-group">
+            <h4>Price range</h4>
+            <ul>
+              <li>
+                <input type="checkbox" id="m-lt20" /><label for="m-lt20"> Lower than $20</label>
+              </li>
+              <li>
+                <input type="checkbox" id="m-20-100" /><label for="m-20-100"> $20 - $100</label>
+              </li>
+              <li>
+                <input type="checkbox" id="m-100-200" /><label for="m-100-200"> $100 - $200</label>
+              </li>
+              <li>
+                <input type="checkbox" id="m-gt200" /><label for="m-gt200"> More than $200</label>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-actions">
+            <button class="clear-btn">CLEAR</button>
+            <button class="save-btn">SAVE</button>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
